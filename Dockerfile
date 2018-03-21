@@ -1,4 +1,7 @@
 FROM ensemblorg/ensembl-vep:latest
+
+LABEL maintainer="sueruen@informatik.uni-tuebingen.de"
+
 USER vep
 WORKDIR $HOME/src/ensembl-vep
 RUN git pull && \
