@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ ! -e /mnt/homo_sapiens ]; then
-    mv /home/vep/.vep/homo_sapiens /mnt
+    cp -r /home/vep/.vep/homo_sapiens /mnt
 fi
 
 for file in human_ancestor.fa.rz human_ancestor.fa.rz.fai LoFtool_scores.txt phylocsf.sql; do
     if  [ ! -f /mnt/$file ]; then
-        mv $file /mnt
+        cp $file /mnt
     fi
 done
 wait
