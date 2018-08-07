@@ -1,4 +1,4 @@
-FROM ensemblorg/ensembl-vep:latest
+FROM ensemblorg/ensembl-vep:release_92
 
 LABEL maintainer="sueruen@informatik.uni-tuebingen.de"
 
