@@ -1,12 +1,12 @@
-FROM ensemblorg/ensembl-vep:release_92
+FROM ensemblorg/ensembl-vep:release_93
 
 LABEL maintainer="sueruen@informatik.uni-tuebingen.de"
 
 USER vep
 WORKDIR $OPT/src/ensembl-vep
 RUN git pull && \
-    git checkout release/92 && \
-    ./INSTALL.pl -n --CACHE_VERSION 92 --VERSION 92 -a acf -s homo_sapiens -y GRCh37
+    git checkout release/93 && \
+    ./INSTALL.pl -n --CACHE_VERSION 93 --VERSION 93 -a acf -s homo_sapiens -y GRCh37
 
 WORKDIR /opt/vep
 RUN wget http://www.broadinstitute.org/~konradk/loftee/human_ancestor.fa.rz && \
